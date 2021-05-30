@@ -31,6 +31,7 @@ function sliderYoutube() {
 
 $(document).ready(function() {
     $('.header__city select').niceSelect()
+    $('.cart__item-amount select').niceSelect()
 
     sliderYoutube()
 
@@ -74,6 +75,20 @@ $(document).ready(function() {
         $(".catalog-detail__color-title span").text(checkedColor)
     })
 
+    // Бургер меню
+    $(".header__burger").click(function() {
+        $(this).toggleClass("header__burger--active");
+        $(".header__nav").slideToggle();
+    })
+
+    // Способы доставки
+    $(".order__delivery-tab").click(function() {
+        let ordeTabPath = $(this).attr("data-tabs-path");
+        $(".order__delivery-tab").removeClass("order__delivery-tab--active")
+        $(`.order__delivery-tab[data-tabs-path="${ordeTabPath}"]`).addClass("order__delivery-tab--active")
+        $(".order__delivery-content").removeClass("order__delivery-content--active")
+        $(`.order__delivery-content[data-tabs-target="${ordeTabPath}"]`).addClass("order__delivery-content--active")
+    })
 
 
 });

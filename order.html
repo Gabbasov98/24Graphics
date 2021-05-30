@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина</title>
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+
+                <div class="header__bottom header__bottom--order">
+                    <a href="index.html" class="header__logo header__logo--order">
+                        <img src="assets/images/logo.svg" alt="">
+                    </a>
+                    <a href="cart.html" class="header__back">
+                        <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M14.3335 16.125L8.9585 21.5L14.3335 26.875L15.6002 25.6083L12.3877 22.3958H34.0418V20.6042H12.3877L15.6002 17.3917L14.3335 16.125Z" fill="#ABABAB"/>
+                        </svg>
+                        <span>Назад в корзину</span>
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+
+        <section class="order">
+            <div class="container">
+                <div class="order__inner">
+                    <div class="order__left">
+                        <h2 class="order__title">Оформление заказа</h2>
+
+                        <div class="order__inputs">
+                            <div class="order__input">
+                                <label for="order-country">Страна *</label>
+                                <input type="text" name="order-country">
+                                <button type="submit" class="order__loc">
+                                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.4092 0.108598C10.6904 -0.0320265 10.9951 -0.0320265 11.2764 0.085161C11.5576 0.202348 11.7686 0.413286 11.9092 0.694536C12.0264 0.999223 12.0264 1.30391 11.8857 1.58516L7.40918 11.3352C7.22168 11.6867 6.96387 11.8977 6.63574 11.968C6.28418 12.0383 5.95605 11.968 5.6748 11.757C5.39355 11.5695 5.25293 11.2648 5.25293 10.8664V6.74141H1.12793C0.729492 6.74141 0.424805 6.60079 0.237305 6.31954C0.0263672 6.03829 -0.0439453 5.71016 0.0263672 5.3586C0.0966797 5.03047 0.307617 4.77266 0.65918 4.58516L10.4092 0.108598Z" fill="#4D69CD"/>
+                                    </svg>
+                                    <span>Определить местоположение</span>
+                                </button>
+                            </div>
+                            <div class="order__input">
+                                <label for="order-city">Город *</label>
+                                <input type="text" name="order-city">
+                            </div>
+                            <div class="order__input">
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="order__delivery">
+                            <p class="order__delivery-title">Способы доставки</p>
+                            <p class="order__delivery-desc">Сроки доставки указаны после изготовления товара (от 7 дней)</p>
+
+                            <div class="order__delivery-tabs">
+                                <div class="order__delivery-tab order__delivery-tab--active" data-tabs-path="1">
+                                    <p>Самовывоз</p>
+                                    <p>260 точек выдачи</p>
+                                </div>
+                                <div class="order__delivery-tab" data-tabs-path="2">
+                                    <p>Курьерская служба</p>
+                                    <p>от 3 дней</p>
+                                </div>
+                                <div class="order__delivery-tab" data-tabs-path="3">
+                                    <p>Почта России</p>
+                                </div>
+                            </div>
+
+                            <div class="order__delivery-contents">
+                                <div class="order__delivery-content order__delivery-content--active" data-tabs-target="1">
+                                    <p class="order__delivery-companies--desc">Найдите на карте точку, из которой Вам удобнее всего забирать заказ, выберете ее и кликните "забрать здесь".</p>
+                                    <div class="order__delivery-companies">
+                                        <div class="order__delivery-companies--top">
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani1" />
+                                                <label for="compani1">
+                                                    <span>Cdek</span>
+                                                    <span>270 руб / 100% предоплата / от 3 дней</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani2" />
+                                                <label for="compani2">
+                                                    <span>Boxberry</span>
+                                                    <span>270 руб / 100% предоплата / от 6 дней</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani3" />
+                                                <label for="compani3">
+                                                    <span>Dpd</span>
+                                                    <span>455 руб / 100% предоплата / от 6 дней</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani4" />
+                                                <label for="compani4">
+                                                    <span>Pickpoint</span>
+                                                    <span>465 руб / 100% предоплата / от 6 дней</span>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="order__delivery-companies--bottom">
+                                            <input type="text" placeholder="Поиск по адресу ">
+                                            <div class="order__delivery-search">
+                                                <input type="checkbox" id="search1" />
+                                                <label for="search1">                 Пункт выдачи                               </label>
+                                            </div>
+                                            <div class="order__delivery-search">
+                                                <input type="checkbox" id="search2" />
+                                                <label for="search2">Постамат                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order__delivery-map map">
+                                        <div class="map__inner">
+                                            <p class="map__title">
+                                                Красноярск,<br> СОКОЛОВСКАЯ УЛ, 78,<br> пом.199
+                                            </p>
+                                            <p class="map__subtitle">Пункт выдачи cdek</p>
+                                            <div class="map__info">
+                                                Время работы: Пн-Пт 10:00-20:00, Сб-Вс 10:00-18:00 <br> Оплата: банковской картой, 100% предоплата <br> Доставим: от 3 дней <br> Описание: СОКОЛОВСКАЯ УЛ, 78, пом.199 <br> Время работы: Пн-Пт 10:00-20:00,
+                                                Сб-Вс 10:00-18:00 <br> Оплата: банковской картой, 100% предоплата <br> Доставим: от 3 дней <br> Описание: СОКОЛОВСКАЯ УЛ, 78, пом.199 <br> Время работы: Пн-Пт 10:00-20:00, Сб-Вс 10:00-18:00 <br> Оплата:
+                                                банковской картой, 100% предоплата <br> Доставим: от 3 дней <br> Описание: СОКОЛОВСКАЯ УЛ, 78, пом.199 <br>
+                                            </div>
+                                            <button class="map__btn">Забрать здесь за 270р</button>
+                                        </div>
+                                    </div>
+                                    <div class="order__delivery-user">
+                                        <div class="order__delivery-user--top">
+                                            <p class="order__delivery-user--title">Данные получателя</p>
+                                            <p class="order__delivery-user--safe">
+                                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 7C12.9062 7 13.25 7.15625 13.5625 7.4375C13.8438 7.75 14 8.09375 14 8.5V14.5C14 14.9375 13.8438 15.2812 13.5625 15.5625C13.25 15.875 12.9062 16 12.5 16H1.5C1.0625 16 0.71875 15.875 0.4375 15.5625C0.125 15.2812 0 14.9375 0 14.5V8.5C0 8.09375 0.125 7.75 0.4375 7.4375C0.71875 7.15625 1.0625 7 1.5 7H2.25V4.75C2.25 3.90625 2.4375 3.125 2.875 2.375C3.3125 1.65625 3.875 1.09375 4.625 0.65625C5.34375 0.21875 6.125 0 7 0C7.84375 0 8.625 0.21875 9.375 0.65625C10.0938 1.09375 10.6562 1.65625 11.0938 2.375C11.5312 3.125 11.75 3.90625 11.75 4.75V7H12.5ZM9.25 7V4.75C9.25 4.125 9.03125 3.59375 8.59375 3.15625C8.15625 2.71875 7.625 2.5 7 2.5C6.375 2.5 5.84375 2.71875 5.40625 3.15625C4.96875 3.59375 4.75 4.125 4.75 4.75V7H9.25Z" fill="#4CAF50"/>
+                                                </svg>
+                                                <span>Безопасно</span>
+                                            </p>
+                                        </div>
+                                        <div class="order__delivery-user--inputs">
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Телефон *</label>
+                                                <input type="text" placeholder="Номер телефона">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Электронная почта *</label>
+                                                <input type="email" placeholder="Адрес электронной почты">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Имя *</label>
+                                                <input type="text" placeholder="Имя">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Фамилия *</label>
+                                                <input type="text" placeholder="Фамилия">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Отчество</label>
+                                                <input type="text" placeholder="Отчество">
+                                                <span class="order__delivery-input--desc">Оператору не придется Вам перезванивать, если вы укажете ФИО полностью. Курьерские службы обязаны сопоставлять ФИО заказа с паспортом. Спасибо за понимание.</span>
+                                            </div>
+                                        </div>
+                                        <p class="order__delivery-coment--title">Комментарии к заказу</p>
+                                        <textarea name="" class="order__delivery-coment" placeholder="Введите свой комментарий"></textarea>
+                                        <p class="order__delivery-coment--hint">Вы можете изменить цвета в этом дизайне, так же на выбор добавить стартовый номер, логотипы и прочее. Напишите Ваши пожелания в этом окне, наши дизайнеры свяжутся с вами для уточнения деталей и согласования итогового
+                                            макета
+                                        </p>
+                                        <div class="order__delivery-user--agree">
+                                            <input type="checkbox" name="agree1" id="agree1">
+                                            <label for="agree1">
+                                                Я согласен получать информацию о скидках и специальных предложениях на <br> указанный мной e-mail и телефон.
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="order__delivery-content " data-tabs-target="2">
+                                    <div class="order__delivery-sdek">
+                                        <div class="order__delivery-sdek--check">
+                                            <input type="checkbox" class="checkbox" id="checkbox" />
+                                            <label for="checkbox">
+                                                <img src="assets/images/sdek.png" alt="">
+                                            </label>
+                                        </div>
+                                        <div class="order__delivery-sdek--logo">
+
+                                        </div>
+                                        <div class="order__delivery-sdek--desc">Доставка курьером СДЭК</div>
+                                        <div class="order__delivery-sdek--desc">От 3 дней</div>
+                                        <div class="order__delivery-sdek--desc">355 руб</div>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.00016 14.6663C4.31826 14.6663 1.3335 11.6815 1.3335 7.99967C1.3335 4.31777 4.31826 1.33301 8.00016 1.33301C11.682 1.33301 14.6668 4.31777 14.6668 7.99967C14.6628 11.6799 11.6804 14.6623 8.00016 14.6663ZM6.66016 7.32634V8.66634H7.32683V11.333H9.34016V9.99967H8.66683L8.6735 7.32701L6.66016 7.32634ZM7.32683 4.66634V6.01234H8.6735V4.66634H7.32683Z" fill="#8B8B8B"/>
+                                        </svg>
+                                    </div>
+                                    <div class="order__delivery-sdek--input">
+                                        <label for="sdek-address">Адрес доставки *</label>
+                                        <input type="text" id="sdek-address" placeholder="Введите свой адрес">
+                                    </div>
+                                    <p class="order__delivery-sdek--pay-title">Способы оплаты</p>
+                                    <div class="order__delivery-sdek--pay">
+                                        <p>Оплатить сейчас</p>
+                                        <p>Банковской картой или <br> электронными деньгами</p>
+                                        <div class="order__delivery-sdek--pay-items">
+                                            <img src="assets/images/visa.svg" alt="">
+                                            <img src="assets/images/mastercard.svg" alt="">
+                                            <img src="assets/images/mir.svg" alt="">
+                                            <img src="assets/images/iomoney.svg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="order__delivery-user">
+                                        <div class="order__delivery-user--top">
+                                            <p class="order__delivery-user--title">Данные получателя</p>
+                                            <p class="order__delivery-user--safe">
+                                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 7C12.9062 7 13.25 7.15625 13.5625 7.4375C13.8438 7.75 14 8.09375 14 8.5V14.5C14 14.9375 13.8438 15.2812 13.5625 15.5625C13.25 15.875 12.9062 16 12.5 16H1.5C1.0625 16 0.71875 15.875 0.4375 15.5625C0.125 15.2812 0 14.9375 0 14.5V8.5C0 8.09375 0.125 7.75 0.4375 7.4375C0.71875 7.15625 1.0625 7 1.5 7H2.25V4.75C2.25 3.90625 2.4375 3.125 2.875 2.375C3.3125 1.65625 3.875 1.09375 4.625 0.65625C5.34375 0.21875 6.125 0 7 0C7.84375 0 8.625 0.21875 9.375 0.65625C10.0938 1.09375 10.6562 1.65625 11.0938 2.375C11.5312 3.125 11.75 3.90625 11.75 4.75V7H12.5ZM9.25 7V4.75C9.25 4.125 9.03125 3.59375 8.59375 3.15625C8.15625 2.71875 7.625 2.5 7 2.5C6.375 2.5 5.84375 2.71875 5.40625 3.15625C4.96875 3.59375 4.75 4.125 4.75 4.75V7H9.25Z" fill="#4CAF50"/>
+                                                </svg>
+                                                <span>Безопасно</span>
+                                            </p>
+                                        </div>
+                                        <div class="order__delivery-user--inputs">
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Телефон *</label>
+                                                <input type="text" placeholder="Номер телефона">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Электронная почта *</label>
+                                                <input type="email" placeholder="Адрес электронной почты">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Имя *</label>
+                                                <input type="text" placeholder="Имя">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Фамилия *</label>
+                                                <input type="text" placeholder="Фамилия">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Отчество</label>
+                                                <input type="text" placeholder="Отчество">
+                                                <span class="order__delivery-input--desc">Оператору не придется Вам перезванивать, если вы укажете ФИО полностью. Курьерские службы обязаны сопоставлять ФИО заказа с паспортом. Спасибо за понимание.</span>
+                                            </div>
+                                        </div>
+                                        <p class="order__delivery-coment--title">Комментарии к заказу</p>
+                                        <textarea name="" class="order__delivery-coment" placeholder="Введите свой комментарий"></textarea>
+                                        <p class="order__delivery-coment--hint">Вы можете изменить цвета в этом дизайне, так же на выбор добавить стартовый номер, логотипы и прочее. Напишите Ваши пожелания в этом окне, наши дизайнеры свяжутся с вами для уточнения деталей и согласования итогового
+                                            макета
+                                        </p>
+                                        <div class="order__delivery-user--agree">
+                                            <input type="checkbox" name="agree1" id="agree1">
+                                            <label for="agree1">
+                                                Я согласен получать информацию о скидках и специальных предложениях на <br> указанный мной e-mail и телефон.
+                                            </label>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="order__delivery-content " data-tabs-target="3">
+                                    sfsf
+                                    <p class="order__delivery-companies--desc">Найдите на карте точку, из которой Вам удобнее всего забирать заказ, выберете ее и кликните "забрать здесь".</p>
+                                    <div class="order__delivery-companies">
+                                        <div class="order__delivery-companies--top">
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani1" />
+                                                <label for="compani1">
+                                                    <span>Cdek</span>
+                                                    <span>270 руб / 100% предоплата / от 3 дней</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani2" />
+                                                <label for="compani2">
+                                                    <span>Boxberry</span>
+                                                    <span>270 руб / 100% предоплата / от 6 дней</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani3" />
+                                                <label for="compani3">
+                                                    <span>Dpd</span>
+                                                    <span>455 руб / 100% предоплата / от 6 дней</span>
+                                                </label>
+                                            </div>
+
+                                            <div class="order__delivery-compani">
+                                                <input type="checkbox" id="compani4" />
+                                                <label for="compani4">
+                                                    <span>Pickpoint</span>
+                                                    <span>465 руб / 100% предоплата / от 6 дней</span>
+                                                </label>
+                                            </div>
+
+                                        </div>
+                                        <div class="order__delivery-companies--bottom">
+                                            <input type="text" placeholder="Поиск по адресу ">
+                                            <div class="order__delivery-search">
+                                                <input type="checkbox" id="search1" />
+                                                <label for="search1">                 Пункт выдачи                               </label>
+                                            </div>
+                                            <div class="order__delivery-search">
+                                                <input type="checkbox" id="search2" />
+                                                <label for="search2">Постамат                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order__delivery-map map">
+                                        <div class="map__inner">
+                                            <p class="map__title">
+                                                Красноярск,<br> СОКОЛОВСКАЯ УЛ, 78,<br> пом.199
+                                            </p>
+                                            <p class="map__subtitle">Пункт выдачи cdek</p>
+                                            <div class="map__info">
+                                                Время работы: Пн-Пт 10:00-20:00, Сб-Вс 10:00-18:00 <br> Оплата: банковской картой, 100% предоплата <br> Доставим: от 3 дней <br> Описание: СОКОЛОВСКАЯ УЛ, 78, пом.199 <br> Время работы: Пн-Пт 10:00-20:00,
+                                                Сб-Вс 10:00-18:00 <br> Оплата: банковской картой, 100% предоплата <br> Доставим: от 3 дней <br> Описание: СОКОЛОВСКАЯ УЛ, 78, пом.199 <br> Время работы: Пн-Пт 10:00-20:00, Сб-Вс 10:00-18:00 <br> Оплата:
+                                                банковской картой, 100% предоплата <br> Доставим: от 3 дней <br> Описание: СОКОЛОВСКАЯ УЛ, 78, пом.199 <br>
+                                            </div>
+                                            <button class="map__btn">Забрать здесь за 270р</button>
+                                        </div>
+                                    </div>
+                                    <div class="order__delivery-user">
+                                        <div class="order__delivery-user--top">
+                                            <p class="order__delivery-user--title">Данные получателя</p>
+                                            <p class="order__delivery-user--safe">
+                                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M12.5 7C12.9062 7 13.25 7.15625 13.5625 7.4375C13.8438 7.75 14 8.09375 14 8.5V14.5C14 14.9375 13.8438 15.2812 13.5625 15.5625C13.25 15.875 12.9062 16 12.5 16H1.5C1.0625 16 0.71875 15.875 0.4375 15.5625C0.125 15.2812 0 14.9375 0 14.5V8.5C0 8.09375 0.125 7.75 0.4375 7.4375C0.71875 7.15625 1.0625 7 1.5 7H2.25V4.75C2.25 3.90625 2.4375 3.125 2.875 2.375C3.3125 1.65625 3.875 1.09375 4.625 0.65625C5.34375 0.21875 6.125 0 7 0C7.84375 0 8.625 0.21875 9.375 0.65625C10.0938 1.09375 10.6562 1.65625 11.0938 2.375C11.5312 3.125 11.75 3.90625 11.75 4.75V7H12.5ZM9.25 7V4.75C9.25 4.125 9.03125 3.59375 8.59375 3.15625C8.15625 2.71875 7.625 2.5 7 2.5C6.375 2.5 5.84375 2.71875 5.40625 3.15625C4.96875 3.59375 4.75 4.125 4.75 4.75V7H9.25Z" fill="#4CAF50"/>
+                                                </svg>
+                                                <span>Безопасно</span>
+                                            </p>
+                                        </div>
+                                        <div class="order__delivery-user--inputs">
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Телефон *</label>
+                                                <input type="text" placeholder="Номер телефона">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Электронная почта *</label>
+                                                <input type="email" placeholder="Адрес электронной почты">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Имя *</label>
+                                                <input type="text" placeholder="Имя">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Фамилия *</label>
+                                                <input type="text" placeholder="Фамилия">
+                                            </div>
+                                            <div class="order__delivery-user--input">
+                                                <label for="">Отчество</label>
+                                                <input type="text" placeholder="Отчество">
+                                                <span class="order__delivery-input--desc">Оператору не придется Вам перезванивать, если вы укажете ФИО полностью. Курьерские службы обязаны сопоставлять ФИО заказа с паспортом. Спасибо за понимание.</span>
+                                            </div>
+                                        </div>
+                                        <p class="order__delivery-coment--title">Комментарии к заказу</p>
+                                        <textarea name="" class="order__delivery-coment" placeholder="Введите свой комментарий"></textarea>
+                                        <p class="order__delivery-coment--hint">Вы можете изменить цвета в этом дизайне, так же на выбор добавить стартовый номер, логотипы и прочее. Напишите Ваши пожелания в этом окне, наши дизайнеры свяжутся с вами для уточнения деталей и согласования итогового
+                                            макета
+                                        </p>
+                                        <div class="order__delivery-user--agree">
+                                            <input type="checkbox" name="agree1" id="agree1">
+                                            <label for="agree1">
+                                                Я согласен получать информацию о скидках и специальных предложениях на <br> указанный мной e-mail и телефон.
+                                            </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order__right">
+                        <div class="order-select">
+                            <div class="order-select__top">
+                                <p>Ваш заказ</p>
+                                <button class="order-select__change">Изменить</button>
+                            </div>
+                            <div class="order-select__items">
+                                <div class="order-select__item">
+                                    <div class="order-select__item-img"><img src="assets/images/catalog9.png" alt=""></div>
+                                    <div class="order-select__item-info">
+                                        <p class="order-select__item-title">Наклейки на снегоход /Ski doo Summit expert..</p>
+                                        <p class="order-select__item-materials">
+                                            <span>Материал / </span>
+                                            <strong>Pro</strong>
+                                        </p>
+                                        <p class="order-select__item-colors">
+                                            <span>Цвет / </span>
+                                            <strong>Синий</strong>
+                                        </p>
+                                    </div>
+                                    <div class="order-select__item-prices">
+                                        <div class="order-select__item-price">17 990 р</div>
+                                        <div class="order-select__item-price order-select__item-price--throw">25 990 р</div>
+                                    </div>
+                                </div>
+                                <div class="order-select__item">
+                                    <div class="order-select__item-img"><img src="assets/images/catalog9.png" alt=""></div>
+                                    <div class="order-select__item-info">
+                                        <p class="order-select__item-title">Наклейки на снегоход /Ski doo Summit expert..</p>
+                                        <p class="order-select__item-materials">
+                                            <span>Материал / </span>
+                                            <strong>Pro</strong>
+                                        </p>
+                                        <p class="order-select__item-colors">
+                                            <span>Цвет / </span>
+                                            <strong>Синий</strong>
+                                        </p>
+                                    </div>
+                                    <div class="order-select__item-prices">
+                                        <div class="order-select__item-price">17 990 р</div>
+                                        <div class="order-select__item-price order-select__item-price--throw">25 990 р</div>
+                                    </div>
+                                </div>
+                                <div class="order-select__item">
+                                    <div class="order-select__item-img"><img src="assets/images/catalog9.png" alt=""></div>
+                                    <div class="order-select__item-info">
+                                        <p class="order-select__item-title">Наклейки на снегоход /Ski doo Summit expert..</p>
+                                        <p class="order-select__item-materials">
+                                            <span>Материал / </span>
+                                            <strong>Pro</strong>
+                                        </p>
+                                        <p class="order-select__item-colors">
+                                            <span>Цвет / </span>
+                                            <strong>Синий</strong>
+                                        </p>
+                                    </div>
+                                    <div class="order-select__item-prices">
+                                        <div class="order-select__item-price">17 990 р</div>
+                                        <div class="order-select__item-price order-select__item-price--throw">25 990 р</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="order-select__num">
+                                <p>
+                                    <span>Товары (3)</span>
+                                    <span>78 030 руб</span>
+                                </p>
+                                <p>
+                                    <span>Скидка</span>
+                                    <span class="red">- 24 030 руб</span>
+                                </p>
+                            </div>
+                            <div class="order-select__all">
+                                <span>Общая стоимость</span>
+                                <span>53 970 руб</span>
+                            </div>
+                            <button class="order-select__btn">Оформить заказ</button>
+                            <div class="order-select__agree">
+                                Оформляя заказ, я соглашаюсь с <a href="#">пользовательским соглашением, политикой конфиденциальности</a> и даю согласие на обработку данных
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__col">
+                        <p class="footer__title">Каталог</p>
+                        <p class="footer__item"><a href="#">Кроссовый мотоцикл</a></p>
+                        <p class="footer__item"><a href="#">Снегоход</a></p>
+                        <p class="footer__item"><a href="#">Гидроцикл</a></p>
+                        <p class="footer__item"><a href="#">Квадроцикл</a></p>
+                        <p class="footer__item"><a href="#">Заводские наклейки</a></p>
+                        <p class="footer__item"><a href="#">Лекала</a></p>
+                    </div>
+                    <div class="footer__col">
+                        <a href="index.html" class="footer__logo"><img src="assets/images/logo.svg" alt=""></a>
+                        <p class="footer__desc">Изготовление графики на мототехнику</p>
+                        <a href="tel:+73912960596" class="footer__phone">+7 391  296-0-596</a>
+                        <a href="tel:+79233698952" class="footer__phone">+7 923 369-89-52</a>
+                        <a href="mailto:24graphics@mail.ru" class="footer__mail">24graphics@mail.ru</a>
+                    </div>
+                    <div class="footer__col">
+                        <p class="footer__title">Помощь</p>
+                        <p class="footer__item"><a href="#">Как заказать</a></p>
+                        <p class="footer__item"><a href="#">Оплата</a></p>
+                        <p class="footer__item"><a href="#">Доставка</a></p>
+                        <p class="footer__item"><a href="#">Стоимость</a></p>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__date">24graphics 2010-2021</div>
+                    <nav class="footer__nav">
+                        <ul>
+                            <li class="footer__nav-item"><a href="#">Галерея</a></li>
+                            <li class="footer__nav-item"><a href="#">О нас</a></li>
+                            <li class="footer__nav-item"><a href="#">Новости</a></li>
+                            <li class="footer__nav-item"><a href="#">Контакты</a></li>
+                            <li class="footer__nav-item"><a href="#">Вопросы</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer__socials">
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 3C5.243 3 3 5.243 3 8V16C3 18.757 5.243 21 8 21H16C18.757 21 21 18.757 21 16V8C21 5.243 18.757 3 16 3H8ZM8 5H16C17.654 5 19 6.346 19 8V16C19 17.654 17.654 19 16 19H8C6.346 19 5 17.654 5 16V8C5 6.346 6.346 5 8 5ZM17 6C16.7348 6 16.4804 6.10536 16.2929 6.29289C16.1054 6.48043 16 6.73478 16 7C16 7.26522 16.1054 7.51957 16.2929 7.70711C16.4804 7.89464 16.7348 8 17 8C17.2652 8 17.5196 7.89464 17.7071 7.70711C17.8946 7.51957 18 7.26522 18 7C18 6.73478 17.8946 6.48043 17.7071 6.29289C17.5196 6.10536 17.2652 6 17 6ZM12 7C9.243 7 7 9.243 7 12C7 14.757 9.243 17 12 17C14.757 17 17 14.757 17 12C17 9.243 14.757 7 12 7ZM12 9C13.654 9 15 10.346 15 12C15 13.654 13.654 15 12 15C10.346 15 9 13.654 9 12C9 10.346 10.346 9 12 9Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48899 2 2 6.489 2 12C2 17.511 6.48899 22 12 22C17.511 22 22 17.511 22 12C22 6.489 17.511 2 12 2ZM12 4C16.4301 4 20 7.56988 20 12C20 16.4301 16.4301 20 12 20C7.56987 20 4 16.4301 4 12C4 7.56988 7.56987 4 12 4ZM6.44531 8.5C6.06431 8.5 6 8.68672 6 8.88672C6 9.24772 6.2995 11.1965 7.9375 13.4375C9.1245 15.0635 10.6892 16 12.0742 16C12.9132 16 13 15.7861 13 15.4531V13.9668C13 13.5658 13.0924 13.5 13.3594 13.5C13.5504 13.5 13.9375 13.625 14.6875 14.5C15.5525 15.509 15.7091 16 16.2051 16H17.5156C17.8196 16 17.995 15.873 18.002 15.625C18.003 15.562 17.9937 15.4901 17.9727 15.4121C17.8757 15.1241 17.432 14.421 16.877 13.75C16.569 13.378 16.266 13.0095 16.127 12.8105C16.032 12.6795 15.996 12.588 16 12.5C16.004 12.408 16.052 12.3183 16.125 12.1953C16.112 12.1953 17.8038 9.82148 17.9688 9.02148C17.9917 8.94548 18.003 8.8745 18 8.8125C17.992 8.6315 17.8672 8.5 17.5742 8.5H16.2656C15.9356 8.5 15.7824 8.69939 15.6934 8.90039C15.6934 8.90039 14.8785 10.5795 13.9375 11.6875C13.6325 12.0075 13.4775 12 13.3125 12C13.2245 12 13 11.8936 13 11.5996V9.00781C13 8.66081 12.9148 8.5 12.6348 8.5H10.3105C10.1065 8.5 10 8.65931 10 8.82031C10 9.15331 10.449 9.23492 10.5 10.1699V11.9805C10.5 12.4205 10.4248 12.5 10.2598 12.5C9.81476 12.5 8.93856 10.9992 8.35156 9.0332C8.22456 8.6462 8.09758 8.5 7.76758 8.5H6.44531Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12.0117 2C6.50572 2 2.02348 6.47837 2.02148 11.9844C2.02048 13.7444 2.48147 15.4626 3.35547 16.9766L2 22L7.23242 20.7637C8.69142 21.5597 10.3339 21.9775 12.0059 21.9785H12.0098C17.5148 21.9785 21.995 17.4991 21.998 11.9941C22 9.32514 20.9622 6.81573 19.0762 4.92773C17.1902 3.04073 14.6837 2.001 12.0117 2ZM12.0098 4C14.1458 4.001 16.1531 4.8338 17.6621 6.3418C19.1711 7.8518 20 9.85819 19.998 11.9922C19.996 16.3962 16.4138 19.9785 12.0078 19.9785C10.6748 19.9775 9.35441 19.6428 8.19141 19.0078L7.51758 18.6406L6.77344 18.8164L4.80469 19.2812L5.28516 17.4961L5.50195 16.6953L5.08789 15.9766C4.38989 14.7686 4.02048 13.3874 4.02148 11.9844C4.02348 7.58238 7.60677 4 12.0098 4ZM8.47656 7.375C8.30956 7.375 8.03955 7.4375 7.81055 7.6875C7.58155 7.9365 6.93555 8.53958 6.93555 9.76758C6.93555 10.9956 7.83008 12.1826 7.95508 12.3496C8.07908 12.5156 9.68175 15.1152 12.2188 16.1152C14.3267 16.9462 14.7549 16.7822 15.2129 16.7402C15.6709 16.6992 16.6904 16.1377 16.8984 15.5547C17.1064 14.9717 17.1069 14.4702 17.0449 14.3672C16.9829 14.2632 16.8164 14.2012 16.5664 14.0762C16.3174 13.9512 15.0903 13.3486 14.8613 13.2656C14.6323 13.1826 14.4648 13.1406 14.2988 13.3906C14.1328 13.6406 13.6558 14.2012 13.5098 14.3672C13.3638 14.5342 13.2188 14.5566 12.9688 14.4316C12.7188 14.3056 11.9149 14.0414 10.9609 13.1914C10.2189 12.5304 9.71827 11.7148 9.57227 11.4648C9.42727 11.2158 9.55859 11.0791 9.68359 10.9551C9.79559 10.8431 9.93164 10.6636 10.0566 10.5176C10.1806 10.3716 10.2236 10.2676 10.3066 10.1016C10.3896 9.93556 10.3472 9.78906 10.2852 9.66406C10.2232 9.53906 9.73763 8.3065 9.51562 7.8125C9.32863 7.3975 9.13112 7.38786 8.95312 7.38086C8.80813 7.37486 8.64256 7.375 8.47656 7.375Z" fill="black"/>
+                            </svg>
+                        </a>
+                        <a href="#">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.5723 3.01163C20.2399 2.97638 19.8786 3.02829 19.5156 3.17179C19.0656 3.34879 12.0144 6.31495 5.44141 9.08195L3.26953 9.99601C2.42853 10.337 2.00391 10.8916 2.00391 11.6386C2.00391 12.1616 2.22525 12.871 3.28125 13.289L6.94727 14.7577C7.26427 15.7087 8.00055 17.9168 8.18555 18.5038C8.29555 18.8518 8.57339 19.7285 9.27539 19.9335C9.41939 19.9825 9.56966 20.0077 9.72266 20.0077C10.1657 20.0077 10.4846 19.8016 10.6406 19.6816L12.9707 17.7109L15.8008 20.328C15.9098 20.439 16.4867 20.9999 17.2617 20.9999C18.2287 20.9999 18.9622 20.1949 19.1152 19.4159C19.1982 18.9889 21.9277 5.28698 21.9277 5.28898C22.1727 4.18998 21.7322 3.61987 21.4492 3.37687C21.2067 3.16937 20.9046 3.04688 20.5723 3.01163ZM19.9102 5.17179C19.5332 7.06179 17.478 17.3781 17.166 18.8651L13.0293 15.039L10.2227 17.4159L11 14.3749C11 14.3749 16.3625 8.94677 16.6855 8.63077C16.9455 8.37777 17 8.28909 17 8.20109C17 8.08409 16.9398 7.99991 16.8008 7.99991C16.6758 7.99991 16.506 8.1197 16.416 8.1757C15.2727 8.88851 10.4041 11.6622 8.00781 13.0253L4.53125 11.6366L6.21875 10.9276C10.5177 9.11765 18.1742 5.89379 19.9102 5.17179Z" fill="black"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.maskedinput.min.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/index.js"></script>
+
+</body>
+
+</html>
